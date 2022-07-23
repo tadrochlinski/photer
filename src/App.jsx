@@ -1,12 +1,13 @@
 import GlobalStyles from "./Components/GlobalStyles/GlobalStyles";
 import AppWrapper from "./Components/AppWrapper/AppWrapper";
+import Navbar from "./Components/Navbar/Navbar";
 
 const App = () =>{
   return (
     <>
       <GlobalStyles/>
       <AppWrapper>
-        <nav>
+        <Navbar>
           <h1>Photer 📷</h1>
           <form>
             <input 
@@ -17,7 +18,7 @@ const App = () =>{
               search
             </button>
           </form>
-        </nav>
+        </Navbar>
 
       </AppWrapper>
     </>
