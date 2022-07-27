@@ -2,23 +2,19 @@ import GlobalStyles from "./Components/GlobalStyles/GlobalStyles";
 import AppWrapper from "./Components/AppWrapper/AppWrapper";
 import Navbar from "./Components/Navbar/Navbar";
 import { useRef, useState, useEffect} from "react";
+import { BrowserRouter as Router, Routes, Route, useNavigate} from "react-router-dom";
+import Home from "./Pages/Home";
+import Gallery from "./Pages/Gallery/Gallery";
+import Photo from "./Pages/Photo/Photo";
 
 const App = () =>{
   const inputRef = useRef(null);
-  const [query, setQuery] = useState('');
-  const [photos, setPhotos] = useState([]);
+  const navigate = useNavigate();
+  const[query, setQuery] = useState('');
 
-  useEffect(() =>{
-    const fetchPhotos = async () =>{
-      const url = `https://api.unsplash.com/search/photos/?query=${query}&client_id=${process.env.REACT_APP_ACCESS_KEY}`;
-      const response = await fetch(url);
-      const data = await response.json();
-      console.log(data.results);
-      setPhotos(data.results);
-    }
-
-    if(query) fetchPhotos();
-  }, [query]);
+    useEffect(() =>{
+      if(query) navigate(query); 
+    } ,[query])
 
   const handleSubmit = (e) =>{
     e.preventDefault();
@@ -38,15 +34,18 @@ const App = () =>{
             placeholder="e.g. apple"
             ref={inputRef}
             />
+    
             <button type="submit">
               search
             </button>
           </form>
         </Navbar>
 
-        <ul>
-          {photos.map(photo => (<li key={photo.alt_description}>{photo.alt_description}</li>))}
-        </ul>
+        <Routes>
+          <Route path="/" element={<Home/>} />
+          <Route path=":query" element={<Gallery/>} />
+          <Route path=":query/:id" element={<Photo/>} />
+        </Routes>
       </AppWrapper>
     </>
   );

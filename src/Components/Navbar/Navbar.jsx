@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 const Navbar = styled.nav`
-    border: 1px dashed red;
     width: 100%;
     height: 60px;
     padding: 0 10px;
