@@ -3,6 +3,13 @@ import styled from "styled-components";
 const PhotoWrapper = styled.div`
     width: 100%;
     padding: 10px;
+    
+    div{
+        width: 135px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 
     img{
         max-width: 100%;
@@ -13,6 +20,7 @@ const PhotoWrapper = styled.div`
     h1{
         margin-bottom: 5px;
         font-weight: 500;
+        color: #3d3d3d;
     }
 `
 

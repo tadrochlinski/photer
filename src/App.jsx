@@ -3,6 +3,7 @@ import AppWrapper from "./Components/AppWrapper/AppWrapper";
 import Navbar from "./Components/Navbar/Navbar";
 import { useRef, useState, useEffect} from "react";
 import { BrowserRouter as Router, Routes, Route, useNavigate} from "react-router-dom";
+import Button from "./Components/Buttons/Button";
 import Home from "./Pages/Home";
 import Gallery from "./Pages/Gallery/Gallery";
 import Photo from "./Pages/Photo/Photo";
@@ -35,9 +36,9 @@ const App = () =>{
             ref={inputRef}
             />
     
-            <button type="submit">
+            <Button primary type="submit">
               search
-            </button>
+            </Button>
           </form>
         </Navbar>
 

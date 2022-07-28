@@ -45,22 +45,6 @@ const Navbar = styled.nav`
             width: 200px;
         }
     }
-
-    button{
-        width: 55px;
-        height: 30px;
-        border: 0;
-        border-radius: 20px;
-        background: #0080ff;
-        color: #fff;
-        transition: 250ms background;
-        
-        &:hover, &:focus{
-            outline: 0;
-            cursor: pointer;
-            background: #0070ee;
-        }
-    }
 `
 
 export default Navbar;
