@@ -12,13 +12,17 @@ const Photo = () =>{
 
     useEffect(() =>{
         const fetchPhotos = async () =>{
-            const url = `https://api.unsplash.com/photos/${id}?client_id=${process.env.REACT_APP_ACCESS_KEY}`
-            const response = await fetch(url);
-            const data = await response.json();
-            console.log(data);
-            setPhoto(data);
-            setSrc(data.urls.regular);
-            setDownload(data.links.download);
+            try{
+                const url = `https://api.unsplash.com/photos/${id}?client_id=${process.env.REACT_APP_ACCESS_KEY}`
+                const response = await fetch(url);
+                const data = await response.json();
+                console.log(data);
+                setPhoto(data);
+                setSrc(data.urls.regular);
+                setDownload(data.links.download);
+            } catch{
+                console.log('error');
+            }
         }
 
         fetchPhotos();

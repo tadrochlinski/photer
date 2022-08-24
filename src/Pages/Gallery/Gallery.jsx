@@ -10,11 +10,15 @@ const Gallery = () =>{
 
     useEffect(() =>{
         const fetchPhotos = async () =>{
-          const url = `https://api.unsplash.com/search/photos/?query=${query}&client_id=${process.env.REACT_APP_ACCESS_KEY}`;
-          const response = await fetch(url);
-          const data = await response.json();
-          console.log(data.results);
-          setPhotos(data.results);
+          try{
+            const url = `https://api.unsplash.com/search/photos/?query=${query}&client_id=${process.env.REACT_APP_ACCESS_KEY}`;
+            const response = await fetch(url);
+            const data = await response.json();
+            console.log(data.results);
+            setPhotos(data.results);
+          } catch{
+            console.log('error');
+          }
         }
     
         if(query) fetchPhotos();

@@ -2,7 +2,7 @@ import GlobalStyles from "./Components/GlobalStyles/GlobalStyles";
 import AppWrapper from "./Components/AppWrapper/AppWrapper";
 import Navbar from "./Components/Navbar/Navbar";
 import { useRef, useState, useEffect} from "react";
-import { BrowserRouter as Router, Routes, Route, useNavigate} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useNavigate, Link} from "react-router-dom";
 import Button from "./Components/Buttons/Button";
 import Home from "./Pages/Home";
 import Gallery from "./Pages/Gallery/Gallery";
