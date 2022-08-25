@@ -43,7 +43,7 @@ const App = () =>{
         </Navbar>
 
         <Routes>
-          <Route path="/photer" element={<Home/>} />
+          <Route path="photer" element={<Home/>} />
           <Route path=":query" element={<Gallery/>} />
           <Route path=":query/:id" element={<Photo/>} />
         </Routes>
