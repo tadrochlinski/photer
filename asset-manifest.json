@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/photer/static/js/main.7fb2834c.js",
+    "main.js": "/photer/static/js/main.a87c2a5c.js",
     "index.html": "/photer/index.html",
-    "main.7fb2834c.js.map": "/photer/static/js/main.7fb2834c.js.map"
+    "main.a87c2a5c.js.map": "/photer/static/js/main.a87c2a5c.js.map"
   },
   "entrypoints": [
-    "static/js/main.7fb2834c.js"
+    "static/js/main.a87c2a5c.js"
   ]
 }
