@@ -1,4 +1,5 @@
 # Photer
+simple photo search application
 
 ### [Go Live](https://tadrochlinski.github.io/photer/)
 
